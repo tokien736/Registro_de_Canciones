@@ -1,8 +1,8 @@
 canciones = {
-    "Cantante" : [],
-    "Album" : [],
-    "Año" : [],
-    "Autor" : []
+    "Cantante" : ["Enrique", "Fernando"],
+    "Album" : ["rosas", "caramelo"],
+    "Año" : [2014, 2016],
+    "Autor" : ["Fedrico", "Ruben"]
 }
 def insertar():
     tamaño = int(input("Cuantas canciones Ingresaras: "))
@@ -16,7 +16,23 @@ def insertar():
         canciones["Año"].append(año)
         canciones["Autor"].append(autor)
     print(canciones)
-    
+def modificar():
+    print(canciones)
+    numero = int(input("Ingrese el número de canción a modificar: "))
+    cantante = input("Ingrese el nuevo cantante: ")
+    album = input("Ingrese el nuevo álbum: ")
+    año = input("Ingrese el nuevo año: ")
+    autor = input("Ingrese el nuevo autor: ")
+
+    canciones["Cantante"][numero - 1] = cantante
+    canciones["Album"][numero - 1] = album
+    canciones["Año"][numero - 1] = año
+    canciones["Autor"][numero - 1] = autor
+
+    print("La canción ha sido modificada: ")
+    print(canciones)
+
+
 
 while True:
     print("----Registro de canciones---\n")
@@ -29,7 +45,7 @@ while True:
     if opcion == "1":
         insertar()
     elif opcion == "2":
-        print("opcion 2")
+        modificar()
     elif opcion == "2":
         print("opcion 3")
     elif opcion == "3":
