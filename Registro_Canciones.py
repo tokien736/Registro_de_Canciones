@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-print("hello Word")
-print("hola")
-=======
 canciones = {
     "Cantante" : ["Enrique", "Fernando"],
     "Album" : ["rosas", "caramelo"],
@@ -36,14 +32,25 @@ def modificar():
     print("La canción ha sido modificada: ")
     print(canciones)
 
-
+def eliminar():
+    print(canciones)
+    numero = int(input("Ingrese el número de canción que desea eliminar: "))
+    if numero > 0 and numero <= len(canciones["Cantante"]):
+        canciones["Cantante"].pop(numero - 1)
+        canciones["Album"].pop(numero - 1)
+        canciones["Año"].pop(numero - 1)
+        canciones["Autor"].pop(numero - 1)
+        print("Canción eliminada con éxito.")
+    else:
+        print("Número de canción inválido.")
+    print(canciones)
 
 while True:
     print("----Registro de canciones---\n")
     print("1. Insetar cancion\n")
     print("2. Modificar cancion\n")
     print("3. Eliminar cancion\n")
-    print("4. Eliminar cancion\n")
+    print("4. Salir del menú\n")
 
     opcion =str(input("Escoja una opcion:"))
     if opcion == "1":
@@ -51,8 +58,8 @@ while True:
     elif opcion == "2":
         modificar()
     elif opcion == "3":
-        print("opcion 3")
+        eliminar()
     elif opcion == "4":
+        print("Gracias por Ingresar al Programa")
         break
 
->>>>>>> b24176b7207771ffd1838defe84f6765dfb7bb79
