@@ -46,8 +46,6 @@ while True:
         insertar()
     elif opcion == "2":
         modificar()
-    elif opcion == "2":
-        print("opcion 3")
     elif opcion == "3":
         print("opcion 3")
     elif opcion == "4":
